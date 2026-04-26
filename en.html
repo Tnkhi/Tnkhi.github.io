@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hilarion - Data Engineer & Web Scraping Expert. I automate complex data extraction and build robust data pipelines for your business decisions.">
+    <meta property="og:title" content="Hilarion | Data Engineer & Web Scraping Expert (Remote)">
+    <meta property="og:description" content="Automate data extraction and build ETL pipelines. 99.26% prediction accuracy with AI models.">
+    <meta property="og:image" content="assets/profil.jpg">
+    <title>Hilarion | Data Engineer & Web Scraping Expert (Remote)</title>
+    <link rel="icon" type="image/jpg" href="assets/profil.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* ── PROJECT SECTION ENHANCEMENTS ── */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: left;
+            transition: 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .project-body {
+            flex: 1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            gap: 1rem;
+        }
+
+        .project-icon-wrap {
+            width: 52px;
+            height: 52px;
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .project-icon-wrap i {
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .project-tags span {
+            background: rgba(56, 189, 248, 0.08);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .project-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: var(--text);
+        }
+
+        .project-body p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 0.8rem;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-stats span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .project-stats i { color: var(--primary); font-size: 0.8rem; }
+
+        .project-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .btn-project {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 8px 16px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 8px;
+            transition: 0.3s all;
+        }
+
+        .btn-project:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--primary);
+        }
+
+        .btn-project-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 8px 14px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            transition: 0.3s all;
+        }
+
+        .btn-project-secondary:hover {
+            color: var(--text);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        /* ── CV BANNER ── */
+        .cv-banner {
+            margin: 60px 10% 0;
+            background: linear-gradient(135deg, rgba(56,189,248,0.08) 0%, rgba(56,189,248,0.03) 100%);
+            border: 1px solid rgba(56,189,248,0.25);
+            border-radius: 16px;
+            padding: 1.8rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cv-banner-text h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-banner-text p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .btn-cv-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: var(--bg);
+            padding: 0.8rem 1.8rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .btn-cv-banner:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(56,189,248,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+            .cv-banner {
+                flex-direction: column;
+                text-align: center;
+                margin: 40px 5% 0;
+            }
+            .btn-cv-banner { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="assets/profil.jpg" alt="Hilarion - Data Engineer" class="profile-pic" loading="lazy">
+            <div class="logo-text">HILARION<span>.DATA</span></div>
+        </div>
+        <ul>
+            <li><a href="#expertise" aria-label="Go to Expertise section">Expertise</a></li>
+            <li><a href="#projets" aria-label="Go to Projects section">Projects</a></li>
+            <li><a href="https://github.com/Tnkhi?tab=repositories" target="_blank" aria-label="Visit GitHub profile"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/hilarion-tchinda-nkengne-1645b73b7" target="_blank" aria-label="Visit LinkedIn profile"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#contact" class="btn-contact" aria-label="Go to contact section">Hire Me</a></li>
+            <li>
+                <a href="fr.html" class="nav-lang-link" title="Switch to French">
+                    <span class="flag-icon nav-flag" aria-label="French flag">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" aria-hidden="true">
+                            <path fill="#002395" d="M0 0h1v2H0z"/>
+                            <path fill="#fff" d="M1 0h1v2H1z"/>
+                            <path fill="#ED2939" d="M2 0h1v2H2z"/>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <img src="assets/profil.jpg" alt="Hilarion - Data Engineer" class="hero-pic" loading="lazy">
+            <h1>Data Engineer & <br><span>Web Scraping Expert</span></h1>
+            <p>I automate complex data extraction and build robust data pipelines to drive your business decisions.</p>
+            <div class="hero-btns">
+                <a href="#projets" class="btn-primary" aria-label="View my projects">View My Work</a>
+                <a href="#contact" class="btn-secondary" aria-label="Contact me">Let's Talk</a>
+                <a href="assets/CV-Bilingue.pdf" download class="btn-cv" aria-label="Download my resume"><i class="fas fa-download"></i> <span>My Resume</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="expertise" class="skills">
+        <h2>Technical Expertise</h2>
+        <div class="skills-wrapper">
+            <div class="skills-track">
+                <div class="skill-card">
+                    <i class="fas fa-spider" aria-hidden="true"></i>
+                    <h3>Web Scraping & Acquisition</h3>
+                    <p>Bypassing anti-bots (Cloudflare, Akamai) and building high-performance async Python scripts (+500 leads/min) with Playwright.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <h3>Data Engineering & Arch.</h3>
+                    <p>Star Schema design on PostgreSQL and automated ETL pipelines (Pandas, SQL) for strategic business KPIs.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain" aria-hidden="true"></i>
+                    <h3>Data Science & Predictive</h3>
+                    <p>Random Forest models and AI sales simulators (Inflation/Price impact) achieving 99.26% prediction accuracy.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                    <h3>Business Intelligence</h3>
+                    <p>Interactive Power BI dashboards and complex DAX measures for real-time multi-channel profitability tracking.</p>
+                </div>
+                <!-- Duplicates for infinite scroll -->
+                <div class="skill-card"><i class="fas fa-spider" aria-hidden="true"></i><h3>Web Scraping & Acquisition</h3><p>Stealth extraction and high-speed automation scripts.</p></div>
+                <div class="skill-card"><i class="fas fa-database" aria-hidden="true"></i><h3>Data Engineering & Arch.</h3><p>PostgreSQL architecture and optimized ETL workflows.</p></div>
+                <div class="skill-card"><i class="fas fa-brain" aria-hidden="true"></i><h3>Data Science & Predictive</h3><p>Predictive analytics and high-precision AI simulation.</p></div>
+                <div class="skill-card"><i class="fas fa-chart-bar" aria-hidden="true"></i><h3>Business Intelligence</h3><p>Advanced data visualization and financial reporting.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <h2>Completed Projects</h2>
+
+        <div class="projects-container">
+
+            <!-- Project 1 — MicroFinance Risk -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-wrap">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Scikit-Learn</span>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3>MicroFinance Risk — Credit Scoring</h3>
+                    <p>Django application for credit risk scoring in microfinance, designed for the Cameroonian / Sentraal African context. Two-level decision architecture: blocking business rules first, then a RandomForest ML model.</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-robot"></i> RandomForestClassifier</span>
+                        <span><i class="fas fa-check-double"></i> 2-Level Decision Logic</span>
+                        <span><i class="fas fa-calculator"></i> Real-time Max Amount Calculator</span>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/Tnkhi/microfinance_risk" target="_blank" class="btn-project" aria-label="View MicroFinance Risk on GitHub">
+                        GitHub <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 — ETL Monitor -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-wrap">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>ETL</span>
+                        <span>PostgreSQL</span>
+                        <span>Monitoring</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3>ETL Monitor</h3>
+                    <p>A pipeline monitoring system to track the health and execution status of ETL jobs. Provides real-time visibility on data flows, alerting on failures and performance bottlenecks.</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-heartbeat"></i> Pipeline Health Tracking</span>
+                        <span><i class="fas fa-bell"></i> Failure Alerting</span>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/Tnkhi/etl-monitor" target="_blank" class="btn-project" aria-label="View ETL Monitor on GitHub">
+                        GitHub <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 — E-Commerce Analytics -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-wrap">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-tags">
+                        <span>FastAPI</span>
+                        <span>PostgreSQL</span>
+                        <span>Star Schema</span>
+                        <span>Chart.js</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3>E-Commerce Analytics Dashboard</h3>
+                    <p>Complete ETL pipeline with an interactive web dashboard replacing Power BI. Star Schema on PostgreSQL with automated KPI views tracking net profit, revenue, margin, and multi-channel sales performance (WhatsApp, Web, Store).</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-star"></i> Star Schema</span>
+                        <span><i class="fas fa-chart-bar"></i> Multi-Channel KPIs</span>
+                        <span><i class="fas fa-file-pdf"></i> PDF Export</span>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/Tnkhi/ecommerce-analytics" target="_blank" class="btn-project" aria-label="View E-Commerce Analytics on GitHub">
+                        GitHub <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4 — DataClean API -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-wrap">
+                        <i class="fas fa-broom" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-tags">
+                        <span>FastAPI</span>
+                        <span>Pandas</span>
+                        <span>PostgreSQL</span>
+                        <span>SaaS</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <h3>DataClean API — SaaS Data Cleaner</h3>
+                    <p>A SaaS data cleaning API built with FastAPI and Pandas. Upload a raw CSV, Excel or JSON file and automatically receive a cleaned file with a detailed report covering duplicates, nulls, type conversions, and snake_case normalization.</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-file-upload"></i> CSV / Excel / JSON</span>
+                        <span><i class="fas fa-magic"></i> Auto Type Detection</span>
+                        <span><i class="fas fa-history"></i> Processing History</span>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/Tnkhi/dataclean-api" target="_blank" class="btn-project" aria-label="View DataClean API on GitHub">
+                        GitHub <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CV Banner -->
+        <div class="cv-banner">
+            <div class="cv-banner-text">
+                <h3>Want the full picture?</h3>
+                <p>Download my resume for a complete overview of my experience, education and skills.</p>
+            </div>
+            <a href="assets/CV-Bilingue.pdf" download class="btn-cv-banner" aria-label="Download resume">
+                <i class="fas fa-download"></i> Download My Resume
+            </a>
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-box">
+            <h2>Ready for your next contract?</h2>
+            <p>Available immediately for remote roles or data consulting missions.</p>
+            <div class="contact-links">
+                <a href="mailto:hilariontchinda@outlook.fr" class="btn-final" aria-label="Send me an email"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/hilarion-tchinda-nkengne-1645b73b7" target="_blank" class="btn-final btn-alt" aria-label="Connect with me on LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--gray);">
+                Check out my repositories on <a href="https://github.com/Tnkhi?tab=repositories" target="_blank" style="color: var(--primary);">GitHub <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Hilarion - Data Engineer (Master's Degree). Douala &amp; Remote.</p>
+    </footer>
+
+</body>
+</html>
